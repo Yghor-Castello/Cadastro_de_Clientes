@@ -20,13 +20,15 @@
         <div class="ui segment">
             <p class="ui big header">Nome: {{ pessoa.nome }}</p>
             <p class="ui big header">CPF: {{ pessoa.cpf}}</p>
-            <p class="ui big header">Endereço: {{pessoa.endereco}}</p>
-            <p class="ui big header">Carro: {{pessoa.carro}} - Modelo: {{pessoa.modelo}} - Cor: {{pessoa.cor}}</p>
+            <p class="ui big header">Endereço: {{ pessoa.endereco }}</p>
+<!--            {% for carro in carro %}-->
+<!--                <p class="ui big header">Carro: {{ carro.carro }} - Modelo: {{ carro.modelo }} - Cor: {{ carro.cor }}</p>-->
+<!--            {% endfor %}-->
             <a class="ui blue button" href="/update/{{ pessoa.id }}">Editar</a>
             <a class="ui red button" href="/delete/{{ pessoa.id }}">Deletar</a>
         </div>
         {% endfor %}
+
     </div>
 </body>
-
 </html>

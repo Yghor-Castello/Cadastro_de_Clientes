@@ -19,9 +19,9 @@
             <div class="field">
             <label>Cliente</label>
             <select name="pessoa_id" >
-            {% for c in carro %}
-                <option value="{{ c.proprietario }}">{{ c.proprietario }}</option>
-            {% endfor %}
+                {% for p in pessoa %}
+                    <option value="{{ p.nome }}">{{ p.nome }}</option>
+                {% endfor %}
             </select>
             </div>
 <!-- ADICIONANDO OS CARROS-->
