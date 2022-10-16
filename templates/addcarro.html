@@ -20,7 +20,7 @@
             <label>Cliente</label>
             <select name="pessoa_id" >
             {% for c in carro %}
-                <option value="{{ c.pessoa_id }}">{{ c.pessoa_id }}</option>
+                <option value="{{ c.proprietario }}">{{ c.proprietario }}</option>
             {% endfor %}
             </select>
             </div>
