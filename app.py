@@ -35,7 +35,6 @@ class Carro(db.Model):
     cor = db.Column(db.String, nullable=False)
     pessoa_id = db.Column(db.Integer, db.ForeignKey('pessoa.id'), nullable=False)
 
-    pessoa = db.relationship('Pessoa', foreign_keys=pessoa_id)
 
     def __init__(self, carro, modelo, cor, pessoa_id):
         self.carro = carro
@@ -94,7 +93,7 @@ def update(pessoa_id):
         carro.cor = request.form['cor']
         db.session.commit()
         return redirect(url_for("home"))
-    return render_template("update.html", pessoa=pessoa)
+    return render_template("update.html", pessoa=pessoa, carro=carro)
 
 #DELETE - DELETAR CLIENTES
 @app.route("/delete/<int:pessoa_id>")
